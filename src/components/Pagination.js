@@ -2,7 +2,6 @@ import React from 'react';
 import { Pagination } from 'react-bootstrap';
 
 const pagination = (props) => {
-	console.log(props);
 	const currentActivePage = props.currentActivePage;
 	const totalPages = props.totalPages;
 	const items = [];

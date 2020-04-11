@@ -29,6 +29,7 @@ const rootReducer = (state = INITIAL_STATE, action) => {
 				currentPosts = state.currentPosts;
 			}
 			return {
+				...state,
 				posts,
 				pageNo,
 				totalPages,
@@ -71,7 +72,6 @@ const rootReducer = (state = INITIAL_STATE, action) => {
 		}
 
 		case PAGE_CHANGE: {
-			console.log(action.payload);
 			const selectedPage = action.payload;
 			const startIndex =
 				selectedPage > -1
