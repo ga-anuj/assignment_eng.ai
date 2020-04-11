@@ -71,6 +71,7 @@ const rootReducer = (state = INITIAL_STATE, action) => {
 		}
 
 		case PAGE_CHANGE: {
+			console.log(action.payload);
 			const selectedPage = action.payload;
 			const startIndex =
 				selectedPage > -1
@@ -79,10 +80,11 @@ const rootReducer = (state = INITIAL_STATE, action) => {
 			const endIndex = startIndex + 20;
 			const posts = state.posts.slice(startIndex, endIndex);
 			return {
-				currentPosts: posts,
-				searchPostPosts: posts,
+				...state,
 				selectedPage: action.payload,
 				currentActivePage: action.payload,
+				currentPosts: posts,
+				searchPostPosts: posts,
 				searchTerm: '',
 			};
 		}

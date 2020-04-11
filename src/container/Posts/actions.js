@@ -29,11 +29,11 @@ export const getSearchAction = (searchKey) => {
 	};
 };
 
-export const getPageChangeAction = (selectedPost) => {
+export const getPageChangeAction = (selectedPage) => {
 	return (dispatch) => {
 		dispatch({
 			type: PAGE_CHANGE,
-			payload: selectedPost,
+			payload: selectedPage,
 		});
 	};
 };

@@ -64,7 +64,7 @@ class Posts extends Component {
 		return (
 			<div className="container p-5">
 				<Form>
-					<Form.Group>
+					<Form.Group controlId="searchId">
 						<Form.Control
 							type="text"
 							placeholder="Search by title, url or author..."
